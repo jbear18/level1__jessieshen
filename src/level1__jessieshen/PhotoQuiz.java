@@ -14,8 +14,10 @@ public class PhotoQuiz {
 
 	public static void main(String[] args) throws Exception {
 		JFrame quizWindow = new JFrame();
+		int score = 0;
 		quizWindow.setVisible(true);
-
+		JOptionPane.showMessageDialog(null,
+				"There will be 2 images, and each correct question will equal 10 points. If you have less than 20 points, you lose. If you have more than 20 points, you win!");
 		// 1. find an image on the internet, and put its URL in a String variable (from
 		// your browser, right click on the image, and select “Copy Image URL”)
 		String blob = "https://i.imgur.com/pOMKdLl.jpg";
@@ -33,13 +35,13 @@ public class PhotoQuiz {
 		// 7. print "CORRECT" if the user gave the right answer
 		if (ans.equals("blobfish")) {
 			JOptionPane.showMessageDialog(null, "Correct!");
-
+			score += 10;
 		}
 
 		// 8. print "INCORRECT" if the answer is wrong
 		else {
 			JOptionPane.showMessageDialog(null, "Incorrect:(");
-
+			score -= 10;
 		}
 
 		// 9. remove the component from the quiz window (you may not see the effect of
@@ -58,13 +60,21 @@ public class PhotoQuiz {
 		// 14. check answer, say if correct or incorrect, etc.
 		if (user.equals("Voldemort")) {
 			JOptionPane.showMessageDialog(null, "Correct!");
-
+			score += 10;
 		} else {
 
 			JOptionPane.showMessageDialog(null, "Incorrect:(");
+			score -= 10;
 
 		}
+		JOptionPane.showMessageDialog(null, "•You have " + score + " points•");
+		if (score == 20) {
+			JOptionPane.showMessageDialog(null, "You won!!!!");
 
+		} else {
+			JOptionPane.showMessageDialog(null, "You lose:(");
+
+		}
 	}
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
