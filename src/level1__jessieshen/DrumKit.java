@@ -19,9 +19,9 @@ import javax.swing.JPanel;
 public class DrumKit extends MouseAdapter {
 
 	JLabel drumLabelWithImage;
-JLabel violinLabelWithImage;
-JLabel ukeleleLabelWithImage;
-	
+	JLabel violinLabelWithImage;
+	JLabel ukeleleLabelWithImage;
+
 	public static void main(String[] args) throws Exception {
 		new DrumKit().getGoing();
 	}
@@ -44,13 +44,13 @@ JLabel ukeleleLabelWithImage;
 		// project under "default package".
 		// 8. Put the name of your image in a String variable.
 		String drumImage1 = "Drum1.jpg";
-		String violinImage1="violin.jpeg";
-		String ukeleleImage1="Ukulele.jpg";
+		String violinImage1 = "violin.jpeg";
+		String ukeleleImage1 = "Ukulele.jpg";
 		// 9. Edit the next line to use your String variable
 		// drumLabelWithImage = createLabelImage(drumImageString);
 		drumLabelWithImage = createLabelImage(drumImage1);
-		violinLabelWithImage=createLabelImage(violinImage1);
-		ukeleleLabelWithImage=createLabelImage(ukeleleImage1);
+		violinLabelWithImage = createLabelImage(violinImage1);
+		ukeleleLabelWithImage = createLabelImage(ukeleleImage1);
 		// 10. Add the image to the panel
 		panel.add(drumLabelWithImage);
 		panel.add(violinLabelWithImage);
@@ -69,20 +69,15 @@ JLabel ukeleleLabelWithImage;
 		// 14. When the mouse is clicked, print "mouse clicked"
 		System.out.println("Mouse Clicked");
 		JLabel drumClicked = (JLabel) e.getSource();
-if(drumClicked==drumLabelWithImage) {
-	
- playSound("Drum1SOUND.wav");	
-}
-else if(drumClicked==violinLabelWithImage) {
-	playSound("violin.wav");
-}
-else {
-	
-	playSound("guitar.wav");
-}
+		if (drumClicked == drumLabelWithImage) {
 
+			playSound("Drum1SOUND.wav");
+		} else if (drumClicked == violinLabelWithImage) {
+			playSound("violin.wav");
+		} else {
 
-
+			playSound("guitar.wav");
+		}
 
 		// 15. Download a drum sound and drop it into your "default package". You can
 		// find it on freesound.org. To download it, log in as
@@ -90,7 +85,7 @@ else {
 		// 16. If they clicked on the drumImage...
 
 		// 17. ...use the playSound method to play a drum sound.
-		
+
 		// 18. Add more images to make a drumkit. Remember to add a mouse listener to
 		// each one.
 	}

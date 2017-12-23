@@ -25,6 +25,6 @@ public class SwingExample {
 		myLabel.setText("doge kills pig:(");
 		// 4. Set Visible
 		myFrame.setVisible(true);
-
+myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
