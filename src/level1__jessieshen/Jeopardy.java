@@ -105,27 +105,30 @@ package level1__jessieshen;
 		
 			// Use the method that plays the jeopardy theme music.
 			JButton buttonPressed = (JButton) arg0.getSource();
-			//playJeopardyTheme();
+			playJeopardyTheme();
 			// If the buttonPressed was the firstButton
 			if(buttonPressed == firstButton) {
 				
-				askQuestion("What type of candy are tiny, round, assorted colors, and are chewy, that are not gumdrops?" , " what is Skittles" , 200);
+				askQuestion("What type of candy are tiny, round, assorted colors, and are chewy, that are not gumdrops?" , "what is Skittles" , 200);
+		firstButton.setText(null);
 			}
+			
 				// Call the askQuestion() method
 				if(buttonPressed==secondButton) {
 					
 					askQuestion("What are Californians favorite Halloween candy?" , "what is Lifesavers" , 400);
+				secondButton.setText(null);
 				}
 				
 				if(buttonPressed==fourthButton) {
 					askQuestion("What is the parent company of Toblerone?" , "what is Mondelez International", 1000);
-					
+					thirdButton.setText(null);
 					
 				}
 				// Fill in the askQuestion() method. When you play the game, the score should change.
 			if(buttonPressed==thirdButton) {
 			 askQuestion("How many flavors of Twizzlers are there?" , "what is six" , 700);
-				
+				fourthButton.setText(null);
 			}
 			// Or if the buttonPressed was the secondButton
 				// Call the askQuestion() method with a harder question
@@ -169,7 +172,7 @@ package level1__jessieshen;
 		}
 	public void playJeopardyTheme() {
 			try {
-				AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("guitar.wav"));
+				AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("/Users/league/Desktop/level1__jessieshen/src/level1__jessieshen/guitar.wav"));
 				Clip clip = AudioSystem.getClip();
 				clip.open(audioInputStream);
 				clip.start();
