@@ -57,7 +57,7 @@ JFrame frame = new JFrame();
 		
 				
 				System.out.println("clicked!");
-			JOptionPane.showMessageDialog(null, "Book of Illusions has sent you a message............ Don't be pigchick18 or else........ sever punishments will occur.");
+			JOptionPane.showMessageDialog(null, "Book of Illusions has sent you a message............ Don't be seanthepig or else........ sever punishments will occur.");
 			// 12. remove everything from the frame that was added earlier
 				frame.remove(label);
 			// 13. load a new image like before (this is more than one line of code)
