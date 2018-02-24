@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class CardGame implements ActionListener{
@@ -78,5 +79,21 @@ public void actionPerformed(ActionEvent e) {
 	ehp=ehp-youattack;
 	health.setText("Your HP:"+ hp);
 	enemyhealth.setText("Enemy HP:"+ ehp);
+	if(hp<=0) {
+		JOptionPane.showMessageDialog(null, "YOU HAVE DIED. I THOUGHT I COULD TRUST YOU");
+	}
+	if(ehp<=0) {
+		JOptionPane.showMessageDialog(null, "CONGRATS. YOU HAVE NOT FAILED ME");
+	}
+	if(hp==0&&ehp==0) {
+		
+		JOptionPane.showMessageDialog(null, "YOU HAVE BOTH DIED, AND FAILED ME");
+		
+	}
+	//String ans= JOptionPane.showInputDialog("Do you want to play again?");
+	//if(ans=="yes") {
+		
+		//JOptionPane.showMessageDialog(null, "Then exit out of this game, and press the green play button at the top");
+	}
 }
-}
+//}
