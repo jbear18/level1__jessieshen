@@ -1,6 +1,8 @@
 package level1__jessieshen;
 
 import java.net.URL;
+import java.util.Random;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,27 +23,42 @@ public static void main(String[] args) {
 	cg.run();
 
 }
-
+JLabel health= new JLabel();
+JLabel enemyhealth= new JLabel();
+int hp= 100;
+int ehp= 100;
 // 1. make a run method
 public void run() {
 	JFrame frame = new JFrame("Guardians of Ambition");
 	JPanel panel = new JPanel();
+	JPanel secondpanel = new JPanel();
+	JPanel thirdpanel= new JPanel();
 	JLabel you= new JLabel("Kim Jong Un");
+
 	you= loadImageFromComputer("Kim Jong Un.jpg");
 	JLabel enemy= new JLabel("Donald J. Trump");
 	enemy=loadImageFromComputer("Donald-Trump.jpg");
-	JLabel health= new JLabel("Your Health");
-	JLabel enemyhealth= new JLabel("Enemy Health");
-	JButton attack= new JButton("Attack");
+	
+	JButton attack= new JButton("Attack!!");
+	health.setText("Your HP:"+ hp);
+	enemyhealth.setText("Enemy HP:"+ ehp);
+	frame.setLayout(new GridLayout(2, 2));
 	frame.add(panel);
-	panel.add(attack);
-	panel.add(enemyhealth);
+	frame.add(secondpanel);
+	frame.add(thirdpanel);
+	thirdpanel.add(attack);
+	secondpanel.add(enemyhealth);
 panel.add(health);
-panel.add(enemy);
+secondpanel.add(enemy);
 panel.add(you);
 	frame.setVisible(true);
 attack.addActionListener(this);
 frame.pack();
+
+
+
+
+
 }
 public JLabel loadImageFromComputer(String fileName) {
 	URL imageURL = getClass().getResource(fileName);
@@ -53,6 +70,13 @@ public JLabel loadImageFromComputer(String fileName) {
 public void actionPerformed(ActionEvent e) {
 	
 	// TODO Auto-generated method stub
-	System.out.println();
+
+	Random gen= new Random();
+	int youattack= gen.nextInt(30);
+	int enemyattack= gen.nextInt(30);
+	hp=hp-enemyattack;
+	ehp=ehp-youattack;
+	health.setText("Your HP:"+ hp);
+	enemyhealth.setText("Enemy HP:"+ ehp);
 }
 }
