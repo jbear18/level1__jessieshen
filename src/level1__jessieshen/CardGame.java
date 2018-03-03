@@ -81,19 +81,26 @@ public void actionPerformed(ActionEvent e) {
 	enemyhealth.setText("Enemy HP:"+ ehp);
 	if(hp<=0) {
 		JOptionPane.showMessageDialog(null, "YOU HAVE DIED. I THOUGHT I COULD TRUST YOU");
+		String ans= JOptionPane.showInputDialog("Do you want to play again?");
+		if(ans=="yes");
 	}
 	if(ehp<=0) {
 		JOptionPane.showMessageDialog(null, "CONGRATS. YOU HAVE NOT FAILED ME");
+		String ans= JOptionPane.showInputDialog("Do you want to play again?");
+		if(ans=="yes");
 	}
 	if(hp==0&&ehp==0) {
 		
 		JOptionPane.showMessageDialog(null, "YOU HAVE BOTH DIED, AND FAILED ME");
+		String ans= JOptionPane.showInputDialog("Do you want to play again?");
+		if(ans=="yes") {
+		JOptionPane.showMessageDialog(null, "Then exit out of this game, and press the green play button at the top");
 		
 	}
-	//String ans= JOptionPane.showInputDialog("Do you want to play again?");
-	//if(ans=="yes") {
+	 {
 		
-		//JOptionPane.showMessageDialog(null, "Then exit out of this game, and press the green play button at the top");
+		
 	}
 }
-//}
+}}
+
