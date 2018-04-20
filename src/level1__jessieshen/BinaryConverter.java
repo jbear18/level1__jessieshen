@@ -57,7 +57,7 @@ String convert1(int asciiValue) {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-String in=	input.getText();
+ String in=	input.getText();
 int out = convert(in);
 String a= convert1(out);
 output.setText(a);

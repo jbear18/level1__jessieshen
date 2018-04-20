@@ -63,7 +63,7 @@ public void makeButtons(){
 		if(e.getSource() == twitter) {
 		JTextField text= new JTextField();
 		text.getText();
-
+//getLatestTweet();
 		
 	}
 	}
