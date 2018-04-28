@@ -18,7 +18,7 @@ public class GetLatestTweet implements ActionListener {
 //	1. Make a UI with a button and a text field for a search term.			
 
 	JPanel panel = new JPanel();
-	JButton twitter= new JButton("Search Twitter");
+	JButton search= new JButton("Search Twitter");
 	JTextField text= new JTextField(10);
 
 public static void main(String[] args) {
@@ -29,10 +29,10 @@ public void makeButtons(){
 	JFrame frame= new JFrame("Get Your Latest Tweet Here");	
 	frame.setSize(550, 180);
 	frame.add(panel);
-	panel.add(twitter);
+	panel.add(search);
 	panel.add(text);
 	frame.setVisible(true);
-	twitter.addActionListener(this);
+	search.addActionListener(this);
 }
 //	2. When the button is clicked, print “tweet tweet”.
 
@@ -59,13 +59,10 @@ public void makeButtons(){
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
-		if(e.getSource() == twitter) {
-		JTextField text= new JTextField();
-		text.getText();
-//getLatestTweet();
-		
-	}
+	System.out.println("Tweet Tweet");
+		 String box= text.getText();
+String ans= getLatestTweet(box);
+	System.out.println(ans);
 	}
 }
 
