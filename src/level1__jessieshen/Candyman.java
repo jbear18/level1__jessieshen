@@ -44,7 +44,7 @@ candy.addActionListener(this);
 			e.printStackTrace();
 		}
 	}
-
+// use creepydoll.jpg and creepysound.wav
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
