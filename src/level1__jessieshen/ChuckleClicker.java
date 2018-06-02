@@ -9,6 +9,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class ChuckleClicker implements ActionListener{
+	
+	
 	JPanel panel= new JPanel();
 	JButton joke= new JButton("joke");
 	JButton punchline= new JButton("punchline");
