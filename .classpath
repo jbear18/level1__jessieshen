@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="src/level1__jessieshen/Tortoise.jar"/>
 	<classpathentry kind="lib" path="src/level1__jessieshen/javazoom.jar"/>
 	<classpathentry kind="lib" path="src/level1__jessieshen/gridworld.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

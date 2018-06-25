@@ -1,10 +1,20 @@
 package level1__jessieshen;
 
+
 //Copyright Wintriss Technical Schools 2013
 public class TeaMaker {
 
 	/* Figure out how to make a cup of tea using the classes below */
-TeaMaker teamaker= new TeaMaker();
+	public static void main(String[] args) {
+	TeaBag teabag= new TeaBag(TeaBag.MINT);
+	Kettle kettle= new Kettle();
+	kettle.getWater();
+kettle.boil();
+
+Cup cup= new Cup();
+	cup.makeTea(teabag, kettle.getWater());
+
+	}
 
 }
 
