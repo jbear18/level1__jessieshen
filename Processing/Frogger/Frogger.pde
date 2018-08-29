@@ -1,11 +1,8 @@
 
-//copy this link below for Frogger recipe:
 
-//http://level1.jointheleague.org/Mod4Recipes/Frogger.html
 
-//Friday: create a constructor for the Car class
-//continue to work on Frogger
-//Goal: Finish Frogger on Friday
+Car car1= new Car();
+Car car2= new Car();
 
 int hopX = width/2;
 int hopY = 480;
@@ -17,7 +14,11 @@ void setup() {
 
 void draw () { 
   background(87, 187, 232);
-  drawBackground();          //background
+  drawBackground(); 
+  
+car1.display();
+car2.display();
+
   //frog
   fill(26, 95, 26);
   ellipse(hopX, hopY, 20, 20);
@@ -28,6 +29,7 @@ void draw () {
   ellipse(hopX+5, hopY-9, 3, 3);
   noStroke();
   noFill();
+
 
 }
 
@@ -78,23 +80,26 @@ void keyPressed() {
 }
 
 
-class Car{
-int carX= 400; //these will need to change
-int carY=  300;
-int carSize= 40;
-int carSpeed=5; //5 units per key pressed
+public class Car{
+int carX; //these will need to change
+int carY;
+int carSize;
+int carSpeed; 
 //create a constructor for your Car class that initializes each member variable with parameters
+Car(){
+carX= 400; //these will need to change
+carY=  300;
+carSize= 50;
+carSpeed=5; 
+ 
+}
+  
 
-void display() 
-{
-      fill(0,255,0);
+
+
+void display(){
+      fill(255,0,0);
       rect(carX , carY, carSize, 50);
 }
-
-
-
-
-
-
 
 }
