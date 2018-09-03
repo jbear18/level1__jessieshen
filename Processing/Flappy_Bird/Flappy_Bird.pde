@@ -39,10 +39,10 @@ void draw() {
   if (pipeX<=0) {
      pipeY= (int) random(500, 800);
     pipeX=800;
-  if(intersects(birdX,birdY, pipeX,pipeY,40)){
-    text("YOU HAVE DIED:(", 400, 300);
-exit();
-  }
+//  if(intersects(birdX,birdY, pipeX,pipeY,40)){
+//    text("YOU HAVE DIED:(", 400, 300);
+//exit();
+//  }
 }
  
 }
@@ -52,9 +52,16 @@ void keyPressed() {
     velocity= -10;
   }
 }
-boolean intersects(int birdX, int birdY, int pipeX, int pipeY, int pipeWidth) {
-  if (birdY > pipeY - 4 && birdX > pipeX && birdX < pipeX + pipeWidth)
-    return true;
-  else 
-  return false;
-}
+
+
+
+
+
+
+
+//boolean intersects(int birdX, int birdY, int pipeX, int pipeY, int pipeWidth) {
+//  if (birdY > pipeY - 4 && birdX > pipeX && birdX < pipeX + pipeWidth)
+//    return true;
+//  else 
+//  return false;
+//}
