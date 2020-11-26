@@ -47,26 +47,26 @@ package level1__jessieshen;
 			frame.setVisible(true);
 			frame.setTitle("Jeopardy");
 			// 3. Create a JPanel variable to hold the header using the createHeader method
-			JPanel header= createHeader("Candy");
+			JPanel header= createHeader("Random Jeopardy");
 			// 4. Add the header component to the quizPanel
 		quizPanel.add(header);
 			// 5. Add the quizPanel to the frame
 			frame.add(quizPanel);
 			// 6. Use the createButton method to set the value of firstButton 
-		firstButton=createButton("$200");
+		firstButton=createButton("$5");
 		// 7. Add the firstButton to the quizPanel
 		quizPanel.add(firstButton);
 			// 8. Write the code inside the createButton() method below. Check that your game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 		
 			// 9. Use the secondButton variable to hold a button using the createButton method
-			secondButton=createButton("$400");
+			secondButton=createButton("$10");
 			// 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
 		
-		thirdButton=createButton("$600");
+		thirdButton=createButton("$15");
 		quizPanel.add(thirdButton);
 		
-		fourthButton=createButton("$1,000");
+		fourthButton=createButton("20");
 		quizPanel.add(fourthButton);
 			// 11. Add action listeners to the buttons (2 lines of code)
 		firstButton.addActionListener(this);
@@ -116,7 +116,7 @@ package level1__jessieshen;
 				// Call the askQuestion() method
 				if(buttonPressed==secondButton) {
 					
-					askQuestion("What are Californians favorite Halloween candy?" , "what is Lifesavers" , 400);
+					askQuestion("What are Californians favorite Halloween candy?" , "What is Lifesavers" , 400);
 				secondButton.setText(null);
 				}
 				
